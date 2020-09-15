@@ -1,0 +1,256 @@
+@import "assets/styles/reset", "assets/styles/variables.scss", "assets/images/icons/style.css";
+
+html {
+  font-size: $base-font-size;
+}
+
+body {
+  margin: 0;
+  font-family: $regular-font;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $grey;
+  line-height: $base-line-height;
+}
+
+h1 {
+  font-family: $bold-font;
+  font-size: $heading-font-size;
+}
+
+h2 {
+  font-family: $bold-font;
+  font-size: $subheading-font-size;
+}
+
+.container {
+  max-width: 1126px;
+  margin: 0 auto;
+
+  &.main {
+    background: $white;
+    margin: 30px auto;
+    padding: 40px 100px;
+    border-radius: $base-radius;
+    box-shadow: $base-shadow;
+  }
+}
+
+.button {
+  border: 1px solid transparent;
+  border-radius: $base-radius;
+  color: $white;
+  min-width: 140px;
+  padding: 7px 21px;
+  line-height: $base-line-height;
+  text-align: center;
+  cursor: pointer;
+
+  &.primary {
+    background-color: $primary;
+
+    &:hover {
+      background-color: $primary-hover;
+    }
+
+    &:active {
+      background-color: $primary-active;
+    }
+
+    &:focus {
+      border-color: $primary-active;
+    }
+  }
+
+  &.secondary {
+    background-color: $secondary;
+
+    &:hover {
+      background-color: $secondary-hover;
+    }
+
+    &:active {
+      background-color: $secondary-active;
+    }
+
+    &:focus {
+      border-color: $secondary-active;
+    }
+  }
+
+  &.success {
+    background-color: $success;
+
+    &:hover {
+      background-color: $success-hover;
+    }
+
+    &:active {
+      background-color: $success-active;
+    }
+
+    &:focus {
+      border-color: $success-active;
+    }
+  }
+
+  &.danger {
+    background-color: $danger;
+
+    &:hover {
+      background-color: $danger-hover;
+    }
+
+    &:active {
+      background-color: $danger-active;
+    }
+
+    &:focus {
+      border-color: $danger-active;
+    }
+  }
+
+  &.warning {
+    background-color: $warning;
+
+    &:hover {
+      background-color: $warning-hover;
+    }
+
+    &:active {
+      background-color: $warning-active;
+    }
+
+    &:focus {
+      border-color: $warning-active;
+    }
+  }
+
+  &.small {
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  &.round {
+    min-width: 44px;
+    min-height: 44px;
+    border-radius: 50%;
+    padding: 0;
+
+    i {
+      font-size: 24px;
+      vertical-align: middle;
+    }
+  }
+}
+
+.input {
+  background-color: $white;
+  border-radius: $base-radius;
+  line-height: $base-line-height;
+  padding: 8px 16px;
+  border: none;
+  box-shadow: $base-shadow;
+
+  &:hover {
+    box-shadow: $input-shadow-hover;
+  }
+
+  &:active, &:focus {
+    box-shadow: $base-shadow;
+  }
+
+  &.error {
+    background: $danger50;
+  }
+}
+
+.checkbox {
+  appearance: none;
+  display: inline-block;
+  position: relative;
+  min-height: 18px;
+  min-width: 18px;
+  border: 1px solid $primary;
+  border-radius: $base-radius;
+  cursor: pointer;
+  outline: none;
+  background: $white;
+
+  &:hover {
+    border-color: $primary-hover;
+  }
+
+  &:checked {
+    background: $primary;
+
+    &::before {
+      position: absolute;
+      display: block;
+      left: 4px;
+      top: 7px;
+      transform: rotate(-50deg);
+      height: 8px;
+      width: 2px;
+      border-radius: 1px;
+      background: $white;
+      content: "";
+    }
+
+    &::after {
+      position: absolute;
+      display: block;
+      left: 10px;
+      top: 2px;
+      transform: rotate(35deg);
+      height: 12px;
+      width: 2px;
+      border-radius: 1px;
+      background: $white;
+      content: "";
+    }
+  }
+}
+
+.radio {
+  appearance: none;
+  position: relative;
+  min-height: 18px;
+  min-width: 18px;
+  border: 1px solid $primary;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  background: $white;
+
+  &:hover {
+    border-color: $primary-hover;
+  }
+
+  &:checked,
+  &.checked {
+    background: $primary;
+
+    &::before {
+      position: absolute;
+      display: block;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      height: 6px;
+      width: 6px;
+      border-radius: 50%;
+      background: $white;
+      content: "";
+    }
+  }
+}
+
+[disabled], .disabled {
+  opacity: .5;
+  pointer-events: none;
+}
+
+.w100 {
+  width: 100%;
+}

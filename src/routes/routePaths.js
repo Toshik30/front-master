@@ -1,0 +1,13 @@
+export const ROOT_PATH = '/';
+export const LOGIN_PATH = '/login';
+export const LOGOUT_PATH = '/logout';
+export const FORGOT_PATH = '/forgot';
+export const SIGNUP_PATH = '/signup';
+export const HELP_PATH = '/help';
+export const SETTINGS_PATH = '/settings';
+export const EMPLOYEES_PATH = '/employees';
+export const EMPLOYEE_ADD_PATH = `${EMPLOYEES_PATH}/employee-add`;
+export const CUSTOMERS_PATH = '/customers';
+export const CUSTOMER_ADD_PATH = '/customer-add';
+export const INVOICE_PATH = '/invoice';
+export const TIMECARDS_PATH = '/timecards';

@@ -1,0 +1,50 @@
+name: CI/CD
+
+on: [push]
+
+jobs:
+  cicd:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    env:
+      REGISTRY_IMAGE: 501874333164.dkr.ecr.us-east-2.amazonaws.com/ez/front:${{ github.sha }}
+
+    steps:
+      - name: Git Checkout
+        uses: actions/checkout@v2
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: |
+          npm install
+          npm run build
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-2
+
+      - name: Login to Amazon ECR
+        uses: aws-actions/amazon-ecr-login@v1
+
+      - name: Build, tag, and push image to Amazon ECR
+        run: |
+          docker build -t $REGISTRY_IMAGE -f ./cicd/Dockerfile .
+          docker push $REGISTRY_IMAGE
+          sed -i "s|REGISTRY_IMAGE_PLACEHOLDER|"$REGISTRY_IMAGE"|g" cicd/nginx.yml
+
+      - name: Trigger deploy
+        uses: Consensys/kubernetes-action@master
+        env:
+          KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
+        with:
+          args: apply -f cicd/nginx.yml

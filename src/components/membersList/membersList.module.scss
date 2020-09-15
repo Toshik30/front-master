@@ -1,0 +1,67 @@
+@import "assets/styles/variables";
+
+.memberListItem {
+  @extend %flex;
+  padding: 5px 20px;
+
+  &:nth-child(odd) {
+    background: $grey-blue10;
+  }
+
+  img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: $grey-blue50;
+  }
+
+  p {
+    margin-left: 30px;
+    max-width: 140px;
+    line-height: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .status {
+    @extend %flex;
+    font-family: $bold-font;
+    position: relative;
+    border-radius: 10px;
+    color: $danger;
+    background: #ffd0cd;
+    font-size: $tiny-font-size;
+    padding: 4px 10px 4px 21px;
+    line-height: 10px;
+    margin-left: auto;
+
+    &:before {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      left: 10px;
+      top: calc(50% - 3px);
+      background: $danger;
+
+      content: '';
+    }
+
+    &:after {
+      content: 'Offline';
+    }
+
+    &.online {
+      color: $success;
+      background: #cdffcd;
+
+      &:before {
+        background: $success;
+      }
+
+      &:after {
+        content: 'Online';
+      }
+    }
+  }
+}

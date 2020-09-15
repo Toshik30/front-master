@@ -1,0 +1,83 @@
+@import "fonts";
+
+$regular-font: "Roboto Regular", sans-serif;
+$medium-font: "Roboto Medium", sans-serif;
+$bold-font: "Roboto Bold", sans-serif;
+
+$base-font-size: 14px;
+$base-line-height: 24px;
+
+$tiny-font-size: 0.7143rem;
+$heading-font-size: 1.42857rem;
+$subheading-font-size: 1.42857rem;
+
+$white: #ffffff;
+$grey: #ececec;
+$grey-blue: #7f87b6;
+$grey-blue10: rgba(127, 135, 182, .1);
+$grey-blue50: rgba(127, 135, 182, .5);
+$black: #111111;
+$primary: #569de5;
+$primary30: rgba(86, 157, 229, .3);
+$primary-hover: #3a89da;
+$primary-active: #2f80ed;
+$secondary: #bdbdbd;
+$secondary-hover: #b5b5b5;
+$secondary-active: #818181;
+$success: #27ae60;
+$success50: rgba(39, 174, 96, .5);
+$success-hover: #219653;
+$success-active: #138e48;
+$warning: #f2994a;
+$warning-hover: #f18a2e;
+$warning-active: #fa7500;
+$danger: #eb5757;
+$danger50: rgba(235, 87, 87, .5);
+$danger-hover: #e84444;
+$danger-active: #cf2020;
+$text-muted: rgba(17, 17, 17, .5);
+$modal-backdrop: rgba(17, 17, 17, .3);
+
+$base-radius: 4px;
+$base-shadow: 0 4px 16px 0 rgba(93, 103, 160, 0.08), 0 4px 4px 0 rgba(93, 103, 160, 0.15);
+$input-shadow-hover: 0 4px 20px 0 rgba(93, 103, 160, 0.08), 0 4px 20px 0 rgba(93, 103, 160, 0.15);
+
+$max-index: 10;
+
+%flex {
+  display: flex;
+  align-items: center;
+}
+
+%flex-center {
+  @extend %flex;
+  justify-content: center;
+}
+
+%flex-between {
+  @extend %flex;
+  justify-content: space-between;
+}
+
+$icomoon-font-family: "icomoon" !default;
+$icomoon-font-path: "fonts" !default;
+
+$icon-archive: "\e900";
+$icon-calendar: "\e901";
+$icon-camera: "\e902";
+$icon-check: "\e903";
+$icon-clock: "\e904";
+$icon-envelope: "\e905";
+$icon-message: "\e906";
+$icon-search: "\e907";
+$icon-x-mark: "\e908";
+$icon-eye-slash: "\e90d";
+$icon-eye: "\e90e";
+$icon-file: "\e90f";
+$icon-image: "\e913";
+$icon-link: "\e914";
+$icon-lock: "\e915";
+$icon-menu: "\e916";
+$icon-plus: "\e917";
+$icon-pen: "\e918";
+$icon-trash: "\e91a";

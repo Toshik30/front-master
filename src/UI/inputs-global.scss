@@ -1,0 +1,23 @@
+@import "assets/styles/variables", "assets/styles/mixins";
+
+.error {
+  position: absolute;
+  top: 100%;
+  left: 5px;
+  color: $danger;
+}
+
+.label {
+  color: $text-muted;
+  font-size: rem(12px, $base-font-size);
+  margin-left: 16px;
+
+  &.required {
+    &:after {
+      color: $danger;
+      margin-left: 5px;
+
+      content: "*";
+    }
+  }
+}

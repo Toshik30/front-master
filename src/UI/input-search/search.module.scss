@@ -1,0 +1,34 @@
+@import "assets/styles/variables";
+
+.search {
+  position: relative;
+
+  i {
+    position: absolute;
+    font-size: 18px;
+    left: 13px;
+    top: 12px;
+    color: $grey-blue;
+  }
+
+  :global(.input) {
+    width: 100%;
+    padding-left: 44px;
+  }
+
+  &:hover {
+
+    i {
+      opacity: .5;
+    }
+  }
+
+  &:focus-within, &:focus, &:active {
+
+    i {
+      color: $primary-active;
+      opacity: 1;
+    }
+  }
+
+}

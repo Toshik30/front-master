@@ -1,0 +1,83 @@
+@import "assets/styles/variables";
+
+.table {
+  width: 100%;
+  border-radius: $base-radius;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px $grey-blue50 inset;
+  margin: 20px 0;
+
+  th, td {
+    border: 1px solid $grey-blue50;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  th {
+    font-family: $medium-font;
+    font-weight: unset;
+    padding: 10px;
+
+    &:first-child {
+      text-align: left;
+    }
+  }
+
+  td {
+    padding: 10px 8px;
+  }
+
+  tbody {
+
+    tr {
+
+      &:nth-child(odd) {
+        background: $grey-blue10;
+      }
+    }
+
+    .controls {
+      padding: 5px;
+
+      i {
+        font-size: 24px;
+        display: block;
+
+        &:global(.icon-pen) {
+          color: $primary;
+          margin-bottom: 10px;
+        }
+
+        &:global(.icon-trash) {
+          color: $danger;
+        }
+      }
+    }
+
+
+    p {
+      padding: 8px 12px;
+      border-radius: $base-radius;
+      background: $success50;
+      line-height: 16px;
+      min-width: 140px;
+
+      &.danger {
+        background: $danger50;
+      }
+    }
+  }
+}
+
+.summary {
+  @extend %flex-between;
+
+  .total {
+
+    p {
+      font-family: $medium-font;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@import "assets/styles/variables";
+
+.auth {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  .description, form {
+    flex: 0 0 410px;
+  }
+
+  .description {
+
+    p {
+      margin-bottom: 20px;
+    }
+  }
+
+  h1 {
+    margin-bottom: 25px;
+  }
+
+  .controls {
+    text-align: center;
+
+    a {
+      color: $primary;
+    }
+
+    button {
+      margin: 20px 0;
+    }
+  }
+
+}

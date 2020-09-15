@@ -1,0 +1,21 @@
+@import "assets/styles/variables", "assets/styles/mixins", "../inputs-global";
+
+.wrapper {
+  position: relative;
+  margin: 25px 0;
+
+  :global(.input) {
+    width: 100%;
+  }
+
+  i {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    font-size: 24px;
+  }
+
+  :global(.icon-check) {
+    color: $success;
+  }
+}

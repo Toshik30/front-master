@@ -1,0 +1,25 @@
+@import "assets/styles/variables";
+
+.modal {
+  background: $white;
+  padding: 30px 130px;
+  border-radius: $base-radius;
+  box-shadow: $base-shadow;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 10px;
+}
+
+.description {
+  margin-bottom: 20px;
+}
+
+.buttonsWrapper {
+  @extend %flex-center;
+
+  :global(.button):not(:last-of-type) {
+    margin-right: 30px;
+  }
+}

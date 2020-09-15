@@ -1,0 +1,62 @@
+@import "assets/styles/variables", "assets/styles/mixins", "../inputs-global";
+
+.wrapper {
+  margin: 25px 0;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  display: block;
+
+  & + .container {
+    margin-left: unset;
+  }
+}
+
+.toggle {
+  @extend %flex-between;
+  width: 100%;
+  font-family: $regular-font;
+  font-size: $base-font-size;
+
+  :global(.icon-arrow-down) {
+    color: $grey-blue50;
+    font-size: 24px;
+    transition: transform .2s ease;
+
+    &.active {
+      transform: scale(-1);
+    }
+  }
+}
+
+.list {
+  width: 100%;
+  top: calc(100% + 4px);
+  border-radius: $base-radius;
+  border: none;
+}
+
+.item {
+
+  > div {
+
+    &:hover {
+      background-color: $primary30 !important;
+    }
+  }
+}
+
+.itemInner {
+  @extend %flex;
+  font-family: $regular-font;
+  font-size: $base-font-size;
+  input {
+    margin-right: 10px;
+  }
+}
+
+.muted {
+  color: $text-muted;
+}

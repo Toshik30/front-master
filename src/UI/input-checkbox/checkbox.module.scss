@@ -1,0 +1,9 @@
+@import "assets/styles/variables";
+
+.label {
+  @extend %flex;
+
+  & input {
+    margin-right: 14px;
+  }
+}

@@ -1,0 +1,38 @@
+@import "assets/styles/variables";
+
+header {
+  background: $white;
+
+  :global(.container) {
+    @extend %flex-between;
+    height: 50px;
+  }
+
+  .navigation, .account {
+    @extend %flex;
+
+    li {
+      &:not(:last-of-type) {
+        margin-right: 24px;
+      }
+    }
+
+    a {
+      color: $black;
+    }
+  }
+
+  .navigation {
+
+    a {
+      text-transform: uppercase;
+      color: $text-muted;
+    }
+
+    .active {
+      font-family: $bold-font;
+      color: $black;
+      border-bottom: 2px solid;
+    }
+  }
+}

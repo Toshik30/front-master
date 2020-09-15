@@ -1,0 +1,69 @@
+@import 'assets/styles/variables';
+
+.error {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $black;
+
+  * {
+    cursor: auto;
+
+    &:not(input):not(textarea) {
+      -webkit-user-select: text;
+      -moz-user-select: text;
+      -ms-user-select: text;
+      user-select: text;
+    }
+  }
+
+  a {
+    cursor: pointer;
+  }
+
+  section {
+    display: block;
+    max-height: 100vh;
+    border-radius: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 20px;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    background: $white;
+    line-height: 1.5em;
+    overflow: auto;
+
+    h1, h2, h3, h4 {
+      margin: 10px 0;
+    }
+
+    h1 {
+      font-size: 24px;
+      line-height: 1em;
+    }
+
+    h2 {
+      font-size: 20px;
+      line-height: 1em;
+    }
+
+    h3 {
+      font-size: 16px;
+      line-height: 1em;
+    }
+
+    h4 {
+      font-size: 12px;
+      line-height: 1.5em;
+    }
+
+    article {
+      padding: 10px;
+      text-align: left;
+    }
+  }
+}

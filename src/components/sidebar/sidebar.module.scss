@@ -1,0 +1,32 @@
+@import "assets/styles/variables";
+
+.sidebar {
+  background: $white;
+  border-radius: $base-radius;
+  padding: 20px 0;
+  flex: 0 0 360px;
+  margin-right: 20px;
+  box-shadow: $base-shadow;
+}
+
+.head {
+  padding: 0 20px;
+
+  .search {
+    margin-bottom: 20px;
+  }
+}
+
+.addMember {
+  @extend %flex;
+  padding: 13px 8px;
+  border: 2px solid $grey-blue10;
+  border-left: none;
+  border-right: none;
+  margin: 5px 0;
+  color: $black;
+
+  p {
+    margin-left: 38px;
+  }
+}

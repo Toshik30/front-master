@@ -1,0 +1,12 @@
+@import "assets/styles/variables";
+
+.modal {
+  @extend %flex-center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: $modal-backdrop;
+  z-index: $max-index;
+}
