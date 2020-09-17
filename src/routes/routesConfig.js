@@ -1,9 +1,10 @@
 import { lazy } from 'react';
 import { importRetry } from 'utils/dynamicImport';
-import { EMPLOYEE_ADD_PATH, EMPLOYEES_PATH, LOGIN_PATH, ROOT_PATH, SIGNUP_PATH } from './routePaths';
+import {CUSTOMERS_PATH, EMPLOYEE_ADD_PATH, EMPLOYEES_PATH, LOGIN_PATH, ROOT_PATH, SIGNUP_PATH} from './routePaths';
 
 
 const imports = {
+  customers: () => import('components/customers/Customers.js'),
   employees: () => import('components/employees/Employees.js'),
   addEmployee: () => import('components/addEmployee/AddEmployee.js'),
   signUp: () => import('components/auth/SignUp'),
@@ -11,6 +12,13 @@ const imports = {
 };
 
 const routesConfig = [
+  {
+    text: 'Customers',
+    path: [ROOT_PATH, CUSTOMERS_PATH],
+    exact: true,
+    private: true,
+    component: lazy(() => importRetry(imports.customers)),
+  },
   {
     text: 'Employees',
     path: [ROOT_PATH, EMPLOYEES_PATH],

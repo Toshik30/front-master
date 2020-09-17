@@ -1,0 +1,70 @@
+@import "components/trackTable/trackTable.module";
+* {
+  font-family: $regular-font;
+  font-size: $base-font-size;
+}
+.customers {
+  display: flex;
+  margin: 30px auto;
+
+  .les {
+    background: $white;
+    padding: 20px;
+
+    p {
+      margin-left: 0;
+      color: #202124;
+      font-size: 14px;
+      font-weight: 500;
+      font-family: $medium-font;
+      line-height: $base-line-height;
+    }
+
+    input {
+      box-shadow: none;
+      border: 1px solid $grey-blue50;
+      position: relative;
+
+      &:after {
+        content: "\e918";
+        position: absolute;
+        height: 24px;
+        width: 24px;
+        right: 0;
+
+      }
+    }
+  }
+  .hui {
+    @extend %flex-between;
+    padding: 36px 0;
+    border-bottom: 2px solid rgba(93, 103, 160, 0.1);
+
+    :nth-child(2) {
+      font-weight: 500;
+    }
+    :nth-child(3) {
+      font-family: $regular-font;
+    }
+    p {
+      margin: 0;
+      line-height: 16px;
+    }
+    .formuser {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+  button {
+    color: $white;
+    border-radius: $base-radius;
+    border-style: none;
+    background: #f2994a;
+    padding: 3px 46px;
+    line-height: $base-line-height;
+    margin-right: 20px;
+
+  }
+
