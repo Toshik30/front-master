@@ -7,64 +7,113 @@
   display: flex;
   margin: 30px auto;
 
-  .les {
+  .info {
     background: $white;
     padding: 20px;
+    border-radius: $base-radius;
 
     p {
-      margin-left: 0;
-      color: #202124;
+      color: $black;
       font-size: 14px;
       font-weight: 500;
-      font-family: $medium-font;
       line-height: $base-line-height;
+      margin: 7px 0;
+      font-family: $medium-font;
     }
 
     input {
       box-shadow: none;
       border: 1px solid $grey-blue50;
-      position: relative;
+    }
+  }
+  .frame {
+    @extend %flex-between;
+    padding: 23px 0 36px;
+    border-bottom: 2px solid rgba(93, 103, 160, 0.1);
 
-      &:after {
-        content: "\e918";
-        position: absolute;
-        height: 24px;
-        width: 24px;
-        right: 0;
+    button {
+      color: $white;
+      border-radius: $base-radius;
+      border-style: none;
+      background: #f2994a;
+      padding: 3px 46px;
+      line-height: $base-line-height;
+      margin-right: 20px;
+    }
+
+    .avatar {
+      position: relative;
+      width: 60px;
+      height: 60px;
+      margin-right: 32px;
+      border-radius: 50%;
+      background: $grey-blue50;
+
+    }
+
+    .status {
+      @extend %flex-center;
+      align-items: start;
+      flex-direction: column;
+
+      p {
+        line-height: 14px;
+
+        &:last-child {
+          font-family: $regular-font;
+        }
+      }
+    }
+
+    .formuser {
+      display: flex;
+
+    }
+  }
+  .phone_mail {
+    @extend %flex;
+    align-items:start;
+
+
+    .phone_mail_item {
+      min-width: 200px;
+
+
+      :first-child {
+        padding-right: 53px;
 
       }
     }
   }
-  .hui {
-    @extend %flex-between;
-    padding: 36px 0;
-    border-bottom: 2px solid rgba(93, 103, 160, 0.1);
+  .customers_dropdown {
+    max-width: 200px;
+    margin: 0;
+  }
+  .added_info {
+    @extend %flex;
 
-    :nth-child(2) {
-      font-weight: 500;
+    button {
+      border: none;
+      background: transparent;
+      font-size: 24px;
+      color: $grey-blue;
     }
-    :nth-child(3) {
-      font-family: $regular-font;
+  }
+  .wrapper {
+    margin: 10px 0;
+  }
+  .project_contact {
+    @extend %flex-between;
+
+    .dropdown {
+      margin:0;
     }
-    p {
-      margin: 0;
-      line-height: 16px;
-    }
-    .formuser {
-      display: flex;
-      flex-direction: column;
-    }
+  }
+  .save_customers {
+    display: flex;
+    justify-content: flex-end;
   }
 }
 
-  button {
-    color: $white;
-    border-radius: $base-radius;
-    border-style: none;
-    background: #f2994a;
-    padding: 3px 46px;
-    line-height: $base-line-height;
-    margin-right: 20px;
 
-  }
 
